@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block body %}
+<div>
+    {% for manga in manga_data %}
+        <div><a href="/manga/{{ manga.id }}">{{ manga.title }} ({{ manga.status }})</a></div>
+    {% endfor %}
+</div>
+{% endblock %}
