@@ -8,4 +8,5 @@ class Chapter():
         chapters = connector.Connect('chapter', **self.fields).get_data()
         total_chapters = chapters['total']
         chapters_pagination = helpers.paginate_chapters(total_chapters)
+        
         return chapters_pagination
